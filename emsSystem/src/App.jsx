@@ -27,19 +27,21 @@ const App = () => {
      else if(authData){
       const employee =  authData.employees.find((e)=>email == e.email && e.password == password);
       if(employee){
-        setUser("employee");
+        setUser('employee');
         setLoggedInUserData('employee');
         localStorage.setItem('loggedInUser', JSON.stringify({role:"employee"}));
       }
      }
      else{
       alert("Invalid credentials");
+      console.log("galat eamil & pass");
      }
   }
+  
   return (
     <>
    {!user ? <Login handleLogin={handleLogin}/> : ""}
-   { user == 'admin' ? <AdminDashboard/> : (user== "employee" ? <EmployeeDashboard data={loggedInUserData}/> : null)}
+   { user == 'admin' ? <AdminDashboard/> : (user == "employee" ? <EmployeeDashboard data={loggedInUserData}/> : null)}
     </>
   );
 };

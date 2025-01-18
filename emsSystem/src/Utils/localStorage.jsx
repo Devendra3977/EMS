@@ -1,7 +1,7 @@
 const employees = [
   {
     "id": 1,
-    "firstname": "Aarav", // Added firstname
+    "firstname": "Aarav",
     "email": "employee1@example.com",
     "password": "123",
     "tasks": [
@@ -35,11 +35,17 @@ const employees = [
         "completed": false,
         "failed": false
       }
-    ]
+    ],
+    "taskNumbers": {
+      "active": 3,
+      "newTask": 2,
+      "completed": 0,
+      "failed": 0
+    }
   },
   {
     "id": 2,
-    "firstname": "Ananya", // Added firstname
+    "firstname": "Ananya",
     "email": "employee2@example.com",
     "password": "123",
     "tasks": [
@@ -73,11 +79,17 @@ const employees = [
         "completed": false,
         "failed": false
       }
-    ]
+    ],
+    "taskNumbers": {
+      "active": 3,
+      "newTask": 1,
+      "completed": 1,
+      "failed": 0
+    }
   },
   {
     "id": 3,
-    "firstname": "Kavya", // Added firstname
+    "firstname": "Kavya",
     "email": "employee3@example.com",
     "password": "123",
     "tasks": [
@@ -101,11 +113,17 @@ const employees = [
         "completed": true,
         "failed": false
       }
-    ]
+    ],
+    "taskNumbers": {
+      "active": 2,
+      "newTask": 1,
+      "completed": 1,
+      "failed": 0
+    }
   },
   {
     "id": 4,
-    "firstname": "Rohan", // Added firstname
+    "firstname": "Rohan",
     "email": "employee4@example.com",
     "password": "123",
     "tasks": [
@@ -149,11 +167,17 @@ const employees = [
         "completed": false,
         "failed": false
       }
-    ]
+    ],
+    "taskNumbers": {
+      "active": 4,
+      "newTask": 3,
+      "completed": 0,
+      "failed": 0
+    }
   },
   {
     "id": 5,
-    "firstname": "Meera", // Added firstname
+    "firstname": "Meera",
     "email": "employee5@example.com",
     "password": "123",
     "tasks": [
@@ -197,9 +221,16 @@ const employees = [
         "completed": false,
         "failed": true
       }
-    ]
+    ],
+    "taskNumbers": {
+      "active": 4,
+      "newTask": 2,
+      "completed": 1,
+      "failed": 1
+    }
   }
 ];
+
 
 const admin = [
   {
