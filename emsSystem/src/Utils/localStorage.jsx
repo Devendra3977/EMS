@@ -10,7 +10,7 @@ const employees = [
         "taskDescription": "Complete project report",
         "taskDate": "2025-01-20",
         "category": "Project",
-        "active": true,
+        "active": false,
         "newTask": true,
         "completed": false,
         "failed": false
@@ -20,7 +20,7 @@ const employees = [
         "taskDescription": "Attend team meeting",
         "taskDate": "2025-01-21",
         "category": "Meeting",
-        "active": true,
+        "active": false,
         "newTask": false,
         "completed": false,
         "failed": false
@@ -30,27 +30,27 @@ const employees = [
         "taskDescription": "Review code changes",
         "taskDate": "2025-01-22",
         "category": "Review",
-        "active": true,
+        "active": false,
         "newTask": true,
         "completed": false,
         "failed": false
       }
     ],
     "taskNumbers": {
-      "active": 3,
+      "active": 0,
       "newTask": 2,
       "completed": 0,
-      "failed": 0
+      "failed": 3
     }
   },
   {
     "id": 2,
     "firstname": "Ananya",
-    "email": "employee2@example.com",
+    "email": "e@e.com",
     "password": "123",
     "tasks": [
       {
-        "taskTitle": "Task 1",
+        "taskTitle": "Fix Bugs",
         "taskDescription": "Prepare presentation",
         "taskDate": "2025-01-19",
         "category": "Presentation",
@@ -60,7 +60,7 @@ const employees = [
         "failed": false
       },
       {
-        "taskTitle": "Task 2",
+        "taskTitle": "Make Resposive Navbar",
         "taskDescription": "Send client email",
         "taskDate": "2025-01-20",
         "category": "Communication",
@@ -70,7 +70,7 @@ const employees = [
         "failed": false
       },
       {
-        "taskTitle": "Task 3",
+        "taskTitle": "Make A ToDo App",
         "taskDescription": "Update project plan",
         "taskDate": "2025-01-22",
         "category": "Planning",
