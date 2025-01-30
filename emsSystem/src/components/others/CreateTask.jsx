@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 const CreateTask = () => {
+  const [userData, setUserData] = useContext(AuthContext)
 
   const [taskTitle, setTaskTitle] = useState('')
   const [taskDescription, setTaskDescription] = useState('')
@@ -8,18 +10,34 @@ const CreateTask = () => {
   const [assignto, setAssignto] = useState('')
   const [category, setCategory] = useState('')
 
+  const [newTask, setNewTask] = useState({})
+
   
 
   const submitHandler =(e)=>{
     e.preventDefault();
-    console.log("Task Created")
-    console.log(taskTitle, taskDescription, taskDate, category, assignto)
+    setNewTask({taskTitle, taskDescription, taskDate, category, active:false,newTask:true,failed:false, completed:false});
+    const data = userData
+
+    
+
+    data.forEach(function(elem){
+      if(assignto == elem.firstname){
+        elem.tasks.push(newTask)
+        elem.taskNumbers.newTask = elem.taskNumbers.newTask+1
+      }
+    });
+   setUserData(data)
+   console.log(data)
+    
     setTaskTitle('')
     setTaskDate('')
     setTaskDescription('')
     setCategory('')
     setAssignto('')
+   
 
+    
   }
   return (
     <div className="p-5 bg-[#1C1C1C] mt-7 rounded">
